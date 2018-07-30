@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".devour-form").on("submit", function(evernt) {
+    $(".devour-form").on("submit", function(event) {
         event.preventDefault();
 
         var burger_id = $(this).children(".burger_id").val();
@@ -8,7 +8,7 @@ $(document).ready(function() {
             method: "PUT",
             url: "/burgers/" + burger_id
         }).then(function(data) {
-            location.reload
+            location.reload();
         });
     });
 });
